@@ -14,10 +14,11 @@ import androidx.compose.ui.Modifier
 import com.example.sharedviewmodelnavigationdemo.ui.MyViewModel
 
 @Composable
-fun ScreenB(vm: MyViewModel,event:()-> Unit) {
+fun ScreenB(vm: MyViewModel,event:()-> Unit,backEvent:()-> Unit) {
     val data by vm.sharedStateFlow.collectAsState()
     Column(Modifier.fillMaxSize(),Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
         OutlinedTextField(value = data, onValueChange = { vm.updateFlow(it) })
         Button(onClick = event) { Text("Submit") }
+        Button(onClick = backEvent) { Text("Back") }
     }
 }

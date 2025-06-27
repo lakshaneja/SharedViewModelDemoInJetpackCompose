@@ -54,6 +54,9 @@ class MainActivity : ComponentActivity() {
                                     vm = vm, {
                                         println("Value is ${vm.sharedStateFlow.value}")
                                         navController.navigate(C(vm.sharedStateFlow.value))
+                                    },
+                                    backEvent = {
+                                        navController.navigateUp()
                                     }
                                 )
                             }
