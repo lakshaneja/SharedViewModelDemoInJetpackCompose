@@ -1,4 +1,4 @@
-# SharedViewModelDemoInJetpackCompose
+# SharedViewModelJetpackCompose
 
 A sample Android project demonstrating how to implement a shared ViewModel across nested navigation graphs using Jetpack Navigation Compose.
 
